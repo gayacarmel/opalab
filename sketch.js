@@ -2,7 +2,7 @@ let opa = "OPA";
 let lab = "Lab";
 let fontSize = 100;
 let amplitude = 20; // גובה הגל
-let frequency = 0.07; // תדירות הגל
+let frequency = 0.1; // תדירות הגל
 let x, y;
 let fontopa, fontlab;
 
@@ -12,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(500, 300);
+  createCanvas(windowWidth, windowHeight);
   textSize(fontSize);
   textAlign(LEFT, CENTER); // מיקום לפי האות הראשונה בצד שמאל
   x = width / 2;
@@ -20,7 +20,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(255,100);
   let mouseOverOPA = mouseX > x - textWidth(opa) / 2 && mouseX < x + textWidth(opa) / 2 && mouseY > y - fontSize / 2 && mouseY < y + fontSize / 2;
 
   let letterX = x - (textWidth(opa) + textWidth(lab)) / 2;
